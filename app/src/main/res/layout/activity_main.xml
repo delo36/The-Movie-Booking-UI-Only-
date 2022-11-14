@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivGetStart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_get_start_image"
+        android:layout_marginTop="@dimen/dimen_130"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_get_start" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivGetStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_100"
+        android:text="@string/lbl_welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeToApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWelcomeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:text="@string/lbl_hello_welcome_to_galaxy_app"
+        android:textColor="@color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGetStarted"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:padding="@dimen/margin_medium_2"
+        android:text="@string/lbl_get_started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/dimen_1" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+package com.padc.themoviebooking.network.dataagents
+
+import com.padc.themoviebooking.data.vos.MovieVO
+import com.padc.themoviebooking.data.vos.UserVO
+import com.padc.themoviebooking.network.responses.CinemaListResponse
+import com.padc.themoviebooking.network.responses.MovieListResponse
+import com.padc.themoviebooking.network.responses.TokenResponse
+
+interface MovieDataAgent {
+    fun registerWithEmail(
+        name: String,
+        phone:String,
+        email: String,
+        password:String,
+        onSuccess: (Pair<String,UserVO>,massage:String) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun loginWithEmail(
+        email: String,
+        password:String,
+        onSuccess: (Pair<String,UserVO>,massage:String) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun getProfile(
+        token:String,
+        onSuccess: (TokenResponse)-> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun getMovieListByStatus(
+        status:String,
+        onSuccess: (List<MovieListResponse>)-> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun getMovieDetail(
+        movieId : String,
+        onSuccess: (MovieVO)-> Unit,
+        onFailure: (String) -> Unit
+    )
+
+  /*  fun getCinemaList(
+        onSuccess: (List<CinemaListResponse>)-> Unit,
+        onFailure: (String) -> Unit
+    )*/
+}

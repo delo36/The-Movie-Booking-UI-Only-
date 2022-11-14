@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.CarouselActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBackBtn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_chevron_left_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_payment_amount"
+        android:textColor="@color/color_gray"
+        android:layout_below="@id/ivBackBtn"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPaymentAmount"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:textColor="@color/black"
+        android:text="$ 906"
+        android:textSize="@dimen/text_heading_1x"/>
+
+    <alirezat775.lib.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tvTotal"
+        android:scrollIndicators="bottom" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAddNewCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_add_new_card"
+        android:textColor="@color/color_green"
+        android:layout_margin="16dp"
+        android:drawablePadding="16dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_regular_2x"
+        android:drawableStart="@drawable/ic_baseline_add_circle_24dp_white"
+        android:layout_below="@id/carouselView"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:background="@drawable/background_button"
+        android:text="@string/lbl_confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+
+</RelativeLayout>

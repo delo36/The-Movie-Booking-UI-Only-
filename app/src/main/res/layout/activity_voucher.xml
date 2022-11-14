@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88FFFFFF"
+    tools:context=".activities.VoucherActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:src="@drawable/ic_baseline_close_24dp_white"/>
+
+    <ScrollView
+        android:layout_below="@id/ivBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvAwesome"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/lbl_awesome"
+               android:layout_centerHorizontal="true"
+               android:textStyle="bold"
+               android:textSize="@dimen/text_heading_1x"
+               android:textColor="@color/black"
+               />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvTicket"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/lbl_this_is_your_ticket"
+               android:layout_below="@id/tvAwesome"
+               android:textSize="@dimen/text_regular_2x"
+               android:layout_centerHorizontal="true"
+               android:textColor="@color/color_gray"/>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/tvTicket"
+               android:layout_marginStart="@dimen/margin_medium_3"
+               android:layout_marginTop="@dimen/margin_medium_2"
+               android:layout_marginEnd="@dimen/margin_medium_3"
+               android:background="@drawable/background_voucher">
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:id="@+id/ivPikachu"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/background_voucher"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/pikachu" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvMovieName"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/ivPikachu"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="Detective Pikachu"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/text_regular_3x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvCinema"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvMovieName"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:text="105m -IMAX"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_3x" />
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:id="@+id/ivDotted"
+                   android:layout_width="match_parent"
+                   android:layout_height="5dp"
+                   android:layout_below="@id/tvCinema"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:src="@drawable/dotted" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvBookingNumberTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/ivDotted"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_booking_no"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvBookingNumber"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/ivDotted"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="GC1547219308"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvShowTimeDateTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvBookingNumberTitle"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_show_time_date"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvShowTimeDate"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvBookingNumberTitle"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="7:00 PM - 10 May"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvTheaterTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvShowTimeDateTitle"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_theater"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvTheater"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvShowTimeDateTitle"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="Galaxy Cinema - Golden City"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvScreenTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvTheaterTitle"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_screen"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvScreen"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvTheaterTitle"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="2"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvRowTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvScreenTitle"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_row"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvRow"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvScreenTitle"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="D"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvSeatsTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvRowTitle"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_seats"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvSeats"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvRowTitle"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="5,6"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvPriceTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvSeats"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="@string/lbl_price"
+                   android:textColor="@color/color_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvPrice"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tvSeatsTitle"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:text="$40.00"
+                   android:textColor="@color/color_dark_gray"
+                   android:textSize="@dimen/text_regular_2x" />
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:id="@+id/ivDottedTwo"
+                   android:layout_width="match_parent"
+                   android:layout_height="5dp"
+                   android:layout_below="@id/tvPriceTitle"
+                   android:layout_marginStart="@dimen/margin_medium_2"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:src="@drawable/dotted" />
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:id="@+id/ivBarcode"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dimen_75"
+                   android:layout_below="@id/ivDottedTwo"
+                   android:scaleType="centerCrop"
+                   android:layout_marginStart="@dimen/margin_xXlarge"
+                   android:layout_marginTop="@dimen/margin_medium_2"
+                   android:layout_marginEnd="@dimen/margin_xXlarge"
+                   android:src="@drawable/barcode" />
+
+           </RelativeLayout>
+       </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

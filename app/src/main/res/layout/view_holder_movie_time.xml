@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tvMovieTime"
+        android:layout_marginTop="@dimen/margin_medium"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_weight="1"
+        android:background="@drawable/background_3d_imax_buttons"
+        android:text="@string/lbl_9_30_am"
+        android:textAllCaps="false"
+        android:textColor="@color/color_dark_gray" />
+</RelativeLayout>
